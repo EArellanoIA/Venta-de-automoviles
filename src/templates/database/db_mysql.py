@@ -1,10 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for
 import mysql.connector
 
-app = Flask(__name__)
-app = Flask(__name__,template_folder='templates')
+app = Flask(__name__,template_folder='templates2')
 
-
+# Configuración de la conexión a MySQL
 db_config = {
     'host': 'localhost',  
     'user': 'root',
@@ -15,12 +14,9 @@ db_config = {
 conn = mysql.connector.connect(**db_config)
 
 @app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/contacto')
 def contacto():
-     return render_template('contacto.html')
+    return render_template('contacto.html')
+
 
 @app.route('/guardar', methods=['POST'])
 def guardar():
@@ -37,16 +33,5 @@ def guardar():
     
     return redirect(url_for('contacto'))
 
-
-@app.route('/promocion')
-def promocion():
-     return render_template('promocion.html')
-
-@app.route('/vehiculos')
-def vehiculos():
-     return render_template('vehiculos.html')
-
-
 if __name__ == '__main__':
     app.run(debug=True)
-

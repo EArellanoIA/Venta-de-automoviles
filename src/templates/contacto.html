@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contacto</title>
+    <meta http-equiv="Content-Type"; charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1" />
+    <link rel="stylesheet" type="text/css" href="static\css\contacto.css" media="screen">
+</head>
+<body>
+
+<header>
+        <a href="/" class="logo"><img src="" alt="">Venta de Autos</a>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/promocion">Promocion 2024</a></li>
+            
+        </ul>
+        </nav> 
+</header>
+    
+    <form method="POST" action="/guardar">
+
+        <h1>Datos de contacto</h1>
+        
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" required><br><br>
+
+        <label for="apellido">apellido:</label>
+        <input type="text" name="apellido" required><br><br>
+
+        <label for="telefono">telefono:</label>
+        <input type="number" name="telefono" required><br><br>
+
+        <label for="direccion">direccion:</label>
+        <input type="text" name="direccion" required><br><br>
+
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+</html>
